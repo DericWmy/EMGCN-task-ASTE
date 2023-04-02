@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #a9b7c6;}
+.s3 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+README.md</font>
+</center></td></tr></table>
+<pre><span class="s0"># </span><span class="s2">EMC-GCN</span>
+
+<span class="s2">Code and datasets of our paper </span><span class="s1">&quot;[</span><span class="s2">Enhanced Multi-Channel Graph Convolutional Network for Aspect Sentiment Triplet Extraction</span><span class="s1">](https://aclanthology.org/2022.acl-long.212/)&quot; </span><span class="s2">accepted by ACL 2022.</span>
+
+<span class="s0">## </span><span class="s2">Requirements</span>
+
+<span class="s0">- </span><span class="s2">python==3.7.6</span>
+
+<span class="s0">- </span><span class="s2">torch==1.4.0</span>
+<span class="s0">- </span><span class="s2">transformers==3.4.0</span>
+<span class="s0">- </span><span class="s2">argparse==1.1</span>
+
+<span class="s0">## </span><span class="s2">Training</span>
+
+<span class="s2">To train the EMC-GCN model, run</span><span class="s1">:</span>
+
+<span class="s3">```</span>
+<span class="s3">cd EMC-GCN/code</span>
+<span class="s3">sh run.sh</span>
+<span class="s3">```</span>
+<span class="s2">or</span>
+<span class="s3">```</span>
+<span class="s3">python main.py --mode train --dataset res14 --batch_size 16 --epochs 100 --model_dir savemodel/ --seed 1000 --pooling avg --prefix ../data/D2/</span>
+<span class="s3">```</span>
+
+<span class="s0">## </span><span class="s2">Inference</span>
+
+<span class="s2">To test the performance of EMC-GCN, you only need to modify the --mode parameter.</span>
+<span class="s3">```</span>
+<span class="s3">python main.py --mode test --dataset res14 --batch_size 16 --epochs 100 --model_dir savemodel/ --seed 1000 --pooling avg --prefix ../data/D2/</span>
+<span class="s3">```</span>
+
+<span class="s0">## </span><span class="s2">Acknowledge</span>
+
+<span class="s2">We appreciate all authors from this paper</span><span class="s1">: &quot;</span><span class="s2">Grid Tagging Scheme for Aspect-oriented Fine-grained Opinion Extraction</span><span class="s1">&quot;</span><span class="s2">, because the code in this repository is based on their work </span><span class="s1">[</span><span class="s2">GTS</span><span class="s1">](https://github.com/NJUNLP/GTS)</span><span class="s2">.</span>
+
+</pre>
+</body>
+</html>
